@@ -7,7 +7,8 @@ class CreateAddresses < ActiveRecord::Migration[7.0]
       t.integer :zip_code
       t.string :country
       t.string :telephone
-      t.references :addressable, polymorphic: true, null: false
+      t.string :address_type
+      t.integer :user_id
 
       t.timestamps
     end

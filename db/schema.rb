@@ -18,11 +18,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_13_083757) do
     t.integer "zip_code"
     t.string "country"
     t.string "telephone"
-    t.string "addressable_type", null: false
-    t.integer "addressable_id", null: false
+    t.string "address_type"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable"
   end
 
   create_table "users", force: :cascade do |t|
